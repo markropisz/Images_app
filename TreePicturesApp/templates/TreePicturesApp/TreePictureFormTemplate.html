@@ -1,0 +1,12 @@
+<title>Picture Upload Site</title>
+<a href="{% url 'pictures:picture_form' %}">Form</a>
+<a href="{% url 'pictures:picture_list' %}">List</a>
+<h1>
+    Picture upload site
+</h1>
+<body>
+    <form enctype="multipart/form-data" action="." method="post"> {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Save" >
+    </form>
+</body>

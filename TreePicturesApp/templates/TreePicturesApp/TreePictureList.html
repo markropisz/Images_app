@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture List</title>
+</head>
+<div class="topnav">
+  <a href="{% url 'pictures:picture_form' %}">Form</a>
+</div>
+    <h1>
+        Photo List Site
+    </h1>
+<body>
+    {% for Picture in object_list %}
+    <li><a href="{% url 'pictures:detail' Picture.pk %}">{{ Picture.title }} - {{ Picture.picture }}</a></li>
+    {% empty %}
+    <li>No pictures yet.</li>
+    {% endfor %}
+
+</body>
+</html>
