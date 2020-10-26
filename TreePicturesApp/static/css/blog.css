@@ -1,0 +1,30 @@
+h1 {
+    color: #696969;
+    margin-top: 0;
+    padding: 15px 15px 15px 20px;
+}
+body {
+    padding-left: 15px;
+    background-color: #DCDCDC;
+    box-shadow: 0 0 0 1px #a27b62;
+}
+.picture_text{
+    font-size: 20pt;
+    text-decoration: none;
+}
+.topnav {
+    font-size: 20pt;
+    padding: 14px 25px;
+    text-align: center;
+}
+img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list_img{
+  width: 15%;
+  height: auto;
+}

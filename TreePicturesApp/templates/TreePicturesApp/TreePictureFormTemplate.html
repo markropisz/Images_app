@@ -1,8 +1,17 @@
-<title>Picture Upload Site</title>
-<a href="{% url 'pictures:picture_form' %}">Form</a>
-<a href="{% url 'pictures:picture_list' %}">List</a>
-<h1>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <meta charset="UTF-8">
+    <title>Picture Upload Site</title>
+</head>
+<div class="topnav">
+    <a href="{% url 'pictures:picture_form' %}">Form</a>
+    <a href="{% url 'pictures:picture_list' %}">List</a>
+</div>
+<h1><strong>
     Picture upload site
+</strong>
 </h1>
 <body>
     <form enctype="multipart/form-data" action="." method="post"> {% csrf_token %}

@@ -2,20 +2,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <meta charset="UTF-8">
     <title>Picture List</title>
 </head>
 <div class="topnav">
   <a href="{% url 'pictures:picture_form' %}">Form</a>
 </div>
-    <h1>
+    <h1><strong>
         Photo List Site
+    </strong>
     </h1>
 <body>
     {% for Picture in object_list %}
+    <strong>
     <li><a href="{% url 'pictures:detail' Picture.pk %}">{{ Picture.title }} - {{ Picture.picture }}</a></li>
+    <div class="list_img">
+        <img src="{{ Picture.picture.url }}" >
+    </div>
     {% empty %}
     <li>No pictures yet.</li>
+    </strong>
     {% endfor %}
 
 </body>
